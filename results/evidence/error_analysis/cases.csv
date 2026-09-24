@@ -1,0 +1,7 @@
+case,image,box_id,confidence,max_iou,x1,y1,x2,y2
+FP1,test__14_jpeg_jpg.rf.7ac4ab13e996bfbada06e9cc91a7b44c.jpg,P4,0.283774,0.276553,260.69,0.91,511.45,182.32
+FP2,test__12_jpeg_jpg.rf.e2fa6f7be06f24622fe094cafb4c1880.jpg,P6,0.313481,0.622257,0.0,182.15,418.12,359.17
+FP3,test__18_jpeg_jpg.rf.0faab53a0bf1bfe5fd8f38b953d5cbd2.jpg,P2,0.253443,0.081576,189.36,341.32,350.7,377.81
+FN1,test__10_jpeg_jpg.rf.fe2b629d6ee81f33d4e62a45e93a0afa.jpg,G0,,0,2.25,263.5,162.75,335.5
+FN2,test__11_jpeg_jpg.rf.68176153cc38d50bf5b40f58759156a9.jpg,G8,,0.0,422.25,80.0,433.75,117.0
+FN3,test__16_jpeg_jpg.rf.f4a55203e903fb2ed23c0045a1fadc0a.jpg,G1,,0.0,210.5,85.25,280.5,96.75
