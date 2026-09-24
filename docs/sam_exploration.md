@@ -1,17 +1,30 @@
-# SAM exploration — current status
+# SAM3 annotation exploration
 
-**Author confirmation, 24 September 2026:** SAM has not yet been tested for this project.
+Mohammad Mango | M4U3 Computer Vision | 24 September 2026
 
-No SAM-derived masks, annotation improvements, success claims or failure claims are reported. The earlier Roboflow box-proposal review does not establish that SAM was used. The trained YOLOv8 baseline uses the frozen bounding-box dataset.
+## Method
+Two qualitative examples were explored in Roboflow Smart Select with the UI model selector set to **SAM3**, using Polygon output and point prompts. These are annotation-assistance trials, not YOLO training or a quantitative segmentation benchmark. The screenshots show previews before Finish. Existing rectangular rust annotations remain visible and must not be confused with the filled polygon preview.
 
-## Short experiment still required
+## Example 1 — 6_jpeg.jpg: diffuse corrosion on a bridge bearing and beam
+The initial preview selected much of the upper beam, including apparently intact painted areas, rather than isolating corrosion. Subsequent positive and negative point prompts excluded a large central painted region, but the preview retained irregular boundaries and small disconnected regions. Multiple corrections were required; the result was not accepted as a reliable rust-only annotation.
 
-The assignment brief requests notes on SAM exploration. To complete those notes, perform a small documented experiment using existing training images, without modifying the baseline dataset or validation split:
+![Initial broad preview](../results/evidence/sam/sam_6_initial.png)
 
-1. Select three training images with a clear rust patch, fragmented corrosion, and an ambiguous rust/paint or rust/concrete boundary.
-2. Record the actual SAM model/version, tool, image filename and point/box prompts used.
-3. Save the original image and mask overlay for each case.
-4. Record what the mask included or missed, whether prompt changes helped, and what manual correction would still be needed.
-5. Conclude whether the observed masks could assist annotation. Do not generalize beyond the inspected examples.
+![Preview after point corrections](../results/evidence/sam/sam_6_corrected.png)
 
-This is an experiment plan, not experimental evidence. Replace this status note with observed results after the experiment. No improvement to YOLO performance can be attributed to SAM without a separately documented retraining and evaluation experiment.
+## Example 2 — 327_jpeg.jpg: isolated rust patch
+A single visible positive point on the small diagonal brown patch at the upper left produced a polygon that visually followed the patch fairly closely, with limited surrounding paint included. This was a better starting annotation than the first example, although pixel accuracy was not measured against a reference mask.
+
+![Single-point preview on isolated patch](../results/evidence/sam/sam_327_single_point.png)
+
+## What helped and what failed
+- A small isolated patch with clear visual contrast was easier to select in this trial.
+- Positive and negative prompts helped remove unwanted painted regions in the complex example.
+- Diffuse corrosion and mixed painted/rusted surfaces required repeated intervention and still produced imperfect boundaries.
+- SAM3 proposals require human review under the rust labeling policy. A selected structural component is not automatically a correct rust mask.
+
+## Effect on the submitted baseline
+These previews were not incorporated into the frozen GitHub Release dataset or used to retrain the submitted YOLOv8 model. The baseline metrics therefore do not measure any improvement from SAM. No claim is made that all working annotations in the online editor remained unchanged; the reproduction source is the previously exported, checksum-pinned ZIP.
+
+## Limits
+Only two selected images were explored. No reference segmentation masks, IoU scores, controlled annotation-time measurements, or general performance estimates were produced. SAM3 is the model name displayed by the interface; the backend build/checkpoint was not independently recorded.
