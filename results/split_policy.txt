@@ -1,0 +1,1 @@
+Original 353/44/43. Seed 42 selects one train image to move to validation; original valid and test merged into validation. Final 352/88. No independent test set. No label edits. Near-duplicate/site leakage not yet excluded. Moved image: 70_jpeg_jpg.rf.91ca84bdfaa538aaead6980a489ce0b4.jpg

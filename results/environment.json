@@ -1,0 +1,14 @@
+{
+  "ultralytics": "8.3.221",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "hardware": "Tesla T4",
+  "model": "yolov8n.pt",
+  "epochs": 30,
+  "batch": 16,
+  "imgsz": 512,
+  "seed": 42,
+  "prediction_conf": 0.25,
+  "mode": "full_training",
+  "started_utc": "2026-09-23T13:23:04.574516+00:00"
+}

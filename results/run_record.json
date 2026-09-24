@@ -1,0 +1,24 @@
+{
+  "ultralytics": "8.3.221",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "hardware": "Tesla T4",
+  "model": "yolov8n.pt",
+  "epochs": 30,
+  "batch": 16,
+  "imgsz": 512,
+  "seed": 42,
+  "prediction_conf": 0.25,
+  "mode": "full_training",
+  "started_utc": "2026-09-23T13:23:04.574516+00:00",
+  "finished_utc": "2026-09-23T13:26:50.208846+00:00",
+  "training_seconds": 207.97816316499996,
+  "session_seconds": 225.63426012700006,
+  "completed_epochs": 30,
+  "source_sha256": "32220278b1b7277d1f662244014b876b7f8298925cec0569ded3decf08aff7b7",
+  "split": {
+    "train": 352,
+    "valid": 88
+  },
+  "fresh_github_reproduction_verified": false
+}
