@@ -1,0 +1,15 @@
+{
+  "ultralytics": "8.3.221",
+  "torch": "2.11.0+cpu",
+  "python": "3.13.15",
+  "hardware": "CPU",
+  "model": "yolov8n.pt",
+  "epochs": 0,
+  "batch": 16,
+  "imgsz": 512,
+  "seed": 42,
+  "prediction_conf": 0.25,
+  "mode": "inference_only",
+  "weights_training_epochs": 30,
+  "started_utc": "2026-09-24T07:40:23.023734+00:00"
+}

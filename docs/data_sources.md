@@ -15,6 +15,6 @@
 
 Photographer: Mohammad Mango. The author confirms personal capture in a public street where photography was permitted. These five images were not used to train the reported baseline. They have no independently verified ground-truth labels and are used for qualitative inference only.
 
-This statement records origin and the author's capture-permission information. It does not assign a reuse license to these photos. A final publication/reuse declaration remains to be recorded separately.
+The five author photographs are offered under CC BY 4.0 with attribution to Mohammad Mango. See [license scope](licensing.md). Inspected EXIF tags include orientation, resolution, color space and pixel dimensions; no GPS EXIF tags were present. This metadata check is limited to the five submitted input copies.
 
 Earlier images sourced from Adobe Stock, Vecteezy, LinkedIn and the Hai Long website were replaced by the personal images and are not part of this final evidence selection. No rights to those internet images are claimed.
